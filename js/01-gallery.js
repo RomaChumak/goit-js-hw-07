@@ -27,23 +27,15 @@ function onOpenLargeImage(evt) {
     const instanse = basicLightbox.create(
         `<img src="${evt.target.dataset.source}" alt="${evt.target.description}"
          width="1300" height="900" data-source="${evt.target.dataset.source}">`,
-        {
-            onShow: handlerEscapeModal,
-            onClose: handlerEscapeModal,
-        }
+            
     );
 
     instanse.show();
-    console.log("onOpenLargeImage data", instanse);
-    function handlerEscapeModal(evt) {
-    if (evt.code === "Escape") {
-        instance.close();
-    }
-    console.log(evt.code)
-}
-}
- 
+  console.log("onOpenLargeImage data", instanse);
 
-window.addEventListener("keydown", handlerEscapeModal);
-window.removeEventListener("keydown", handlerEscapeModal);
+  
+}
+
+
+
 
